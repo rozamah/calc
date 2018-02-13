@@ -14,21 +14,7 @@ import org.junit.*;
 class calctest {
 	model model1 = new model();
 	view1 view2 = new view1();
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
-	}
+	
 
 	@Test
 	void test() {
