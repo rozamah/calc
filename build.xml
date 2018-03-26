@@ -7,8 +7,8 @@
 <property name="result.javaclasses.dir" location="${result.dir}/classes"/>
   
   
-  <property name="sonar.jdbc.username" value="hi" />
- <property name="sonar.jdbc.password" value="hi" />
+  <property name="sonar.jdbc.username" value="sonar" />
+ <property name="sonar.jdbc.password" value="sonar" />
   <property name="sonar.host.url" value="http://localhost:9000" />
 	
 	<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
@@ -26,11 +26,11 @@
 		</taskdef>
 		
 		<!-- Execute SonarQube Scanner for Ant Analysis -->
-		<hi:hi />
+		<sonar:sonar />
 	</target>
 
 	
-	<target name="all" depends="compile,sonar" />
+	
 
 
   
@@ -67,8 +67,8 @@ includeantruntime="false">
 </javac>
 
 </target>
+<target name="all" depends="compile,sonar" />
 
-<target name="test" depends="compile">
 
 <!--fork : each test will run in its own JVM (to seperate test cases)-->
 
