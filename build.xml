@@ -1,4 +1,5 @@
-<project default="compile">
+
+<project default="all" basedir="." xmlns:sonar="antlib:org.sonar.ant">
 
 <property name="src.java.dir" location="./src/calc"/>
 
@@ -27,75 +28,12 @@
 		
 		<!-- Execute SonarQube Scanner for Ant Analysis -->
 		<sonar:sonar />
-	</target>
-
 	
-	
-
-
-  
-  
-
-<path id="NecessaryLibraries"> 
-
-<pathelement location="./MyLibraries/junit.jar"/>
-
-
-
-<pathelement location="./MyLibraries/org.hamcrest.core_1.3.0.v201303031735.jar"/>
-
-<pathelement location="./MyLibraries/selenium-server-standalone-3.9.1.jar"/>
-
-</path>
-
-<target name="compile">
-
-<mkdir dir="${result.javaclasses.dir}"/>
-
-<javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true"
-
-includeantruntime="false">
-
-<classpath>
-
-<path refid="NecessaryLibraries"/>
-
-<pathelement location="${result.javaclasses.dir}"/>
-
-</classpath>
-
-</javac>
 
 </target>
 <target name="all" depends="compile,sonar" />
 
 
-<!--fork : each test will run in its own JVM (to seperate test cases)-->
 
-<junit printsummary="true" haltonfailure="true" fork="true">
-
-<classpath>
-
-<path refid="NecessaryLibraries"></path>
-
-<pathelement location="${result.javaclasses.dir}"/>
-
-</classpath>
-
-<formatter type="brief" usefile="false"/>
-
-<batchtest >
-
-<fileset dir="${result.javaclasses.dir}" >
-
-<include name="**/*calctest.class"/>
-
-</fileset>
-
-</batchtest>
-
-</junit>
-
-</target>
 
 </project>
