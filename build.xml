@@ -7,8 +7,8 @@
 <property name="result.javaclasses.dir" location="${result.dir}/classes"/>
   
   
-  <property name="sonar.jdbc.username" value="sonar" />
- <property name="sonar.jdbc.password" value="sonar" />
+  <property name="sonar.jdbc.username" value="hi" />
+ <property name="sonar.jdbc.password" value="hi" />
   <property name="sonar.host.url" value="http://localhost:9000" />
 	
 	<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
@@ -26,7 +26,7 @@
 		</taskdef>
 		
 		<!-- Execute SonarQube Scanner for Ant Analysis -->
-		<sonar:sonar />
+		<hi:hi />
 	</target>
 
 	
