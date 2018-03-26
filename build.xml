@@ -10,12 +10,12 @@
   <property name="sonar.jdbc.username" value="sonar" />
  <property name="sonar.jdbc.password" value="sonar" />
   <property name="sonar.host.url" value="http://localhost:9000" />
-	<!-- Define the Sonar properties -->
+	
 	<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
 	<property name="sonar.projectName" value="Example of SonarQube Scanner for Ant Usage" />
 	<property name="sonar.projectVersion" value="1.0" />
 	<property name="sonar.language" value="java" />
-	<property name="sonar.sources" value=""./src/calc"" />
+	<property name="sonar.sources" value="./src/calc"/>
 	<property name="sonar.binaries" value="./target" />
 	  
   
@@ -29,7 +29,7 @@
 		<sonar:sonar />
 	</target>
 
-	<!-- ========= The main target "all" ========= -->
+	
 	<target name="all" depends="compile,sonar" />
 
 
